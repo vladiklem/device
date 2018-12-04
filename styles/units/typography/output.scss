@@ -1,19 +1,41 @@
 @font-face{
-  font-family: ;
+  font-family: "Gilroy";
   font-style: normal;
-  font-weight: normal;
-  src: 
+  font-weight: 300;
+  src: local("Gilroy"),
+  url("../../../fonts/gilroylight.woff2") format("woff2"),
+  url("../../../fonts/gilroylight.woff") format("woff");
 }
 
 @font-face{
-  font-family: ;
+  font-family: "Gilroy";
   font-style: normal;
-  font-weight: bold;
-  src: 
+  font-weight: 900;
+  src: local("Gilroy"),
+  url("../../../fonts/gilroyextrabold.woff2") format("woff2"),
+  url("../../../fonts/gilroyextrabold.woff") format("woff");
+}
+
+@font-face{
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Open Sans"),
+  url("../../../fonts/opensans.woff2") format("woff2"),
+  url("../../../fonts/opensans.woff") format("woff");
+}
+
+@font-face{
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans"),
+  url("../../../fonts/opensanslight.woff2") format("woff2"),
+  url("../../../fonts/opensanslight.woff") format("woff");
 }
 
 html, body {
-  font-family: "Helvetica", sans-serif;
+  font-family: "Open Sans", "Helvetica", sans-serif;
   font-weight: normal;
   line-height: 1.4;
 }
