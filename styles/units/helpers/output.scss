@@ -1,0 +1,55 @@
+.section{
+  max-width: 1162px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.relative{
+  position: relative;
+}
+
+.ml-a{
+  margin-left: auto;
+}
+
+.mr-40{
+  margin-right: 40px;
+}
+
+.mr-tab-60{
+  @include tablet{
+    margin-right: 60px;
+  }
+}
+
+.mb-25{
+  margin-bottom: 25px;
+}
+
+.mb-mob-10{
+  @include mobile{
+    margin-bottom: 10px;
+  }
+}
+
+.mr-tab-50_des-20{
+  @include tablet{
+    margin-right: 20px;
+  }
+
+  @include desktop{
+    margin-right: 50px;
+  }
+}
+
+.tab-mt-55{
+  @include tablet{
+    margin-top: 55px;
+  }
+}
+
+.tab-mt-40{
+  @include tablet{
+    margin-top: 40px;
+  }
+}

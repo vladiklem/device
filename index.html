@@ -5,42 +5,63 @@
     <title>Device</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
-<header>
-    <h1><a href="#">Device</a></h1>
-    <nav>
-        <ul>
-            <li><form><img src="icons/search.svg" role="presentation" alt="Поиск по сайту"/><input type="text" placeholder="Поиск по сайту"/><button type="submit">Найти</button></form></li>
-            <li><a href="#"><img src="icons/user.svg" role="presentation" alt="Войти в личный кабинет">Войти</a><span><a href="#">Александр Курицын </a><button>Выйти</button></span></li>
-            <li><a href="#"><img src="icons/compare.svg" alt="Сравнить два товара">Сравнить</a></li>
-            <li><a href="#"><img src="icons/cart.svg" alt="Корзина с покупками">Корзина</a></li>
+<header class="navbar section relative tab-mt-40">
+    <h1 class="navbar__logo"><a class="navbar__logo-link" href="#">Device</a></h1>
+    <nav class="navbar__all-lists">
+        <ul class="actions-list">
+            <li class="actions-list__item-left">
+                <form class="actions-list__search-form relative">
+                    <img class="actions-list__search-icon" src="icons/search.svg" role="presentation" alt="Поиск по сайту"/>
+                    <input class="actions-list__search-input" type="text" placeholder="Поиск по сайту"/>
+                    <button class="actions-list__search-button" type="submit">Найти</button>
+                </form>
+            </li>
+            <li class="actions-list__item-right">
+                <div class="actions-list__user-panel">
+                    <a class="actions-list__link" href="#"><img class="actions-list__icon" src="icons/user.svg" role="presentation" alt="Войти в личный кабинет">Войти</a>
+                    <span class="actions-list__user-name-logout">
+                        <a href="#">Александр Курицын </a>
+                        <button>Выйти</button>
+                    </span>
+                </div>
+                <div class="actions-list__compare-cart">
+                    <a class="actions-list__link mr-40" href="#"><img class="actions-list__icon" src="icons/compare.svg" alt="Сравнить два товара">Сравнить</a>
+                    <a class="actions-list__link" href="#"><img class="actions-list__icon" src="icons/cart.svg" alt="Корзина с покупками">Корзина</a>
+                </div>
+            </li>
         </ul>
-        <ul>
-            <li>Каталог товаров<img src="icons/plus.svg" alt="Plus icon">
-                <ul>
-                    <li>
+        <ul class="nav-list tab-mt-55">
+            <li class="nav-list__item-left relative mb-mob-10"><button class="nav-list__show-catalog-button">Каталог товаров<img class="nav-list__plus" src="icons/plus.svg" alt="Plus icon"></button>
+                <ul class="product-categories">
+                    <li class="mr-tab-60">
                         <ul>
-                            <li><a href="#">Виртуальная реальность</a></li>
-                            <li><a href="#">Моноподы для селфи</a></li>
-                            <li><a href="#">Экшн-камеры</a></li>
+                            <li class="mb-25"><a class="product-categories__link" href="#">Виртуальная реальность</a></li>
+                            <li class="mb-25"><a class="product-categories__link" href="#">Моноподы для селфи</a></li>
+                            <li class="mb-25"><a class="product-categories__link" href="#">Экшн-камеры</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="mr-tab-60">
                         <ul>
-                            <li><a href="#">Фитнес-браслеты</a></li>
-                            <li><a href="#">Умные часы</a></li>
+                            <li class="mb-25"><a class="product-categories__link" href="#">Фитнес-браслеты</a></li>
+                            <li class="mb-25"><a class="product-categories__link" href="#">Умные часы</a></li>
                         </ul>
                     </li>
 
                     <li>
-                        <a href="#">Квадрокоптеры</a>
+                        <a class="product-categories__link" href="#">Квадрокоптеры</a>
                     </li>
                 </ul>
             </li>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Гарантия</a></li>
-            <li><a href="#">Контакты</a></li>
+            <li class="nav-list__item-right relative">
+                <div class="nav-list__delivery-guarantee mr-tab-50_des-20">
+                    <a class="nav-list__link mr-tab-50_des-20 mb-mob-10" href="#">Доставка</a>
+                    <a class="nav-list__link mb-mob-10" href="#">Гарантия</a>
+                </div>
+                <a class="nav-list__link" href="#">Контакты</a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -56,9 +77,15 @@
                 <div>
                     <a href="#">Подробнее</a>
                     <ul>
-                        <li><button><img src="icons/slider-button.svg" role="presentation" alt="Slider button"></button></li>
-                        <li><button><img src="icons/slider-button-empty.svg" role="presentation" alt="Empty slider button"></button></li>
-                        <li><button><img src="icons/slider-button-empty.svg" role="presentation" alt="Empty slider button"></button></li>
+                        <li>
+                            <button><img src="icons/slider-button.svg" role="presentation" alt="Slider button"></button>
+                        </li>
+                        <li>
+                            <button><img src="icons/slider-button-empty.svg" role="presentation" alt="Empty slider button"></button>
+                        </li>
+                        <li>
+                            <button><img src="icons/slider-button-empty.svg" role="presentation" alt="Empty slider button"></button>
+                        </li>
                     </ul>
                 </div>
                 <div>
