@@ -38,19 +38,19 @@
                 <ul class="product-categories">
                     <li class="mr-tab-60">
                         <ul>
-                            <li class="mb-25"><a class="product-categories__link" href="#">Виртуальная реальность</a></li>
-                            <li class="mb-25"><a class="product-categories__link" href="#">Моноподы для селфи</a></li>
-                            <li class="mb-25"><a class="product-categories__link" href="#">Экшн-камеры</a></li>
+                            <li class="mob-text-center mb-25"><a class="product-categories__link" href="#">Виртуальная реальность</a></li>
+                            <li class="mob-text-center mb-25"><a class="product-categories__link" href="#">Моноподы для селфи</a></li>
+                            <li class="mob-text-center mb-25"><a class="product-categories__link" href="#">Экшн-камеры</a></li>
                         </ul>
                     </li>
                     <li class="mr-tab-60">
                         <ul>
-                            <li class="mb-25"><a class="product-categories__link" href="#">Фитнес-браслеты</a></li>
-                            <li class="mb-25"><a class="product-categories__link" href="#">Умные часы</a></li>
+                            <li class="mob-text-center mb-25"><a class="product-categories__link" href="#">Фитнес-браслеты</a></li>
+                            <li class="mob-text-center mb-25"><a class="product-categories__link" href="#">Умные часы</a></li>
                         </ul>
                     </li>
 
-                    <li>
+                    <li class="mob-text-center">
                         <a class="product-categories__link" href="#">Квадрокоптеры</a>
                     </li>
                 </ul>
@@ -66,92 +66,117 @@
     </nav>
 </header>
 <main>
-    <section class="section">
+    <section class=" section">
         <h2 class="visually-hidden">Реклама залежавшихся товаров</h2>
-        <div class="relative one-slide">
-            <span>01</span>
-            <img src="images/slider-1.png" alt="Три селфи палки">
-            <div>
-                <h3>Делай селфи как Бен Стиллер</h3>
-                <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл) метров длиной и весом всего 5 килограмм.</p>
-                <div>
-                    <a href="#">Подробнее</a>
-                    <ul>
-                        <li>
-                            <button><img src="icons/slider-button.svg" role="presentation" alt="Slider button"></button>
-                        </li>
-                        <li>
-                            <button><img src="icons/slider-button-empty.svg" role="presentation" alt="Empty slider button"></button>
-                        </li>
-                        <li>
-                            <button><img src="icons/slider-button-empty.svg" role="presentation" alt="Empty slider button"></button>
-                        </li>
-                    </ul>
+        <input id="slide-1" name="main-products" class="visually-hidden" type="radio" checked />
+        <input id="slide-2" name="main-products" class="visually-hidden" type="radio" />
+        <input id="slide-3" name="main-products" class="visually-hidden" type="radio" />
+
+        <ul class="slider">
+            <li class="slider__one-slide relative one-slide" data-slide="1">
+                <span class="one-slide__number">01</span>
+                <div class="one-slide__image-wrapper">
+                    <img class="one-slide__image" src="images/slider-1.png" alt="Три селфи палки">
                 </div>
-                <div>
-                    <div>
-                        <span>8,5 м</span>
-                        <p>Длина палки</p>
+                <div class="one-slide__information">
+                    <h3 class="one-slide__name relative">Делай селфи, <br class="des-br"> как Бен Стиллер</h3>
+                    <p class="one-slide__add">Самая длинная палка для селфи доступна в нашем магазине.</p>
+                    <p class="one-slide__add">Восемь (Восемь, Карл) метров длиной и весом всего 5 килограмм.</p>
+                    <div class="one-slide__about-switcher">
+                        <a class="one-slider__about button" href="#"><span class="button__text">Подробнее</span></a>
+                        <ul class="one-slide__switcher">
+                            <li>
+                                <label for="slide-1" class="one-slide__switcher-button"><img src="icons/slider-button.svg" role="presentation" alt="Slider button"></label>
+                            </li>
+                            <li>
+                                <label for="slide-2" class="one-slide__switcher-button"><img src="icons/slider-button-empty.svg" role="presentation" alt="Empty slider button"></label>
+                            </li>
+                            <li>
+                                <label for="slide-3" class="one-slide__switcher-button"><img src="icons/slider-button-empty.svg" role="presentation" alt="Empty slider button"></label>
+                            </li>
+                        </ul>
                     </div>
-                    <div>
-                        <span>5 кг</span>
-                        <p>Вес палки</p>
-                    </div>
-                    <div>
-                        <span>Карбон</span>
-                        <p>Материал</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div>
-            <span>02</span>
-            <img src="images/slider-2.png" alt="Мотифирующий браслет , что бы ты мог смотреть цитаты когда смотришь время в перерывах между тем когда втыкаешь в телефоне">
-            <div>
-                <h3>Худеем правильно!</h3>
-                <p>Мотифирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-                <div>
-                    <a href="#">Подробнее</a>
-                    <ul>
-                        <li><button><img src="icons/slider-button-empty.svg" role="presentation" alt="Empty slider button"></button></li>
-                        <li><button><img src="icons/slider-button.svg" role="presentation" alt="slider button"></button></li>
-                        <li><button><img src="icons/slider-button-empty.svg" role="presentation" alt="Empty slider button"></button></li>
-                    </ul>
-                </div>
-                <div>
-                    <div>
-                        <span>48 часов</span>
-                        <p>Без подзарядки</p>
+                    <div class="one-slide__specifications-list">
+                        <div class="one-slide__specification">
+                            <span class="one-slide__value">8,5 м</span>
+                            <p class="one-slide__description">Длина палки</p>
+                        </div>
+                        <div class="one-slide__specification">
+                            <span class="one-slide__value">5 кг</span>
+                            <p class="one-slide__description">Вес палки</p>
+                        </div>
+                        <div class="one-slide__specification">
+                            <span class="one-slide__value">Карбон</span>
+                            <p class="one-slide__description">Материал</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div>
-            <span>03</span>
-            <img src="images/slider-3.png" alt="Мотифирующий браслет , что бы ты мог смотреть цитаты когда смотришь время в перерывах между тем когда втыкаешь в телефоне">
-            <div>
-                <h3>Порхает как бабочка , жалит как пчела!</h3>
-                <p>Этот обычный , на первый взгляд , квадрокоптер оснащен мощным лазером, замаскированым под стандартную камеру.</p>
-                <div>
-                    <a href="#">Подробнее</a>
-                    <ul>
-                        <li><button><img src="icons/slider-button-empty.svg" role="presentation" alt="Empty slider button"></button></li>
-                        <li><button><img src="icons/slider-button-empty.svg" role="presentation" alt="Empty slider button"></button></li>
-                        <li><button><img src="icons/slider-button.svg" role="presentation" alt="Slider button"></button></li>
-                    </ul>
+            </li>
+            <li class="slider__one-slide relative one-slide" data-slide="2">
+                <span class="one-slide__number">02</span>
+                <div class="one-slide__image-wrapper">
+                    <img class="one-slide__image" src="images/slider-2.png" alt="Мотифирующий браслет , что бы ты мог смотреть цитаты когда смотришь время в перерывах между тем когда втыкаешь в телефоне">
                 </div>
-                <div>
-                    <div>
-                        <span>800 м</span>
-                        <p>Дальность полёта</p>
+                <div class="one-slide__information">
+                    <h3 class="one-slide__name relative">Худеем <br class="des-br"> правильно!</h3>
+                    <p class="one-slide__add">Мотифирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+                    <div class="one-slide__about-switcher">
+                        <a class="one-slider__about button" href="#"><span class="button__text">Подробнее</span></a>
+                        <ul class="one-slide__switcher">
+                            <li>
+                                <label for="slide-1" class="one-slide__switcher-button"><img src="icons/slider-button-empty.svg" role="presentation" alt="Empty slider button"></label>
+                            </li>
+                            <li>
+                                <label for="slide-2" class="one-slide__switcher-button"><img src="icons/slider-button.svg" role="presentation" alt="Slider button"></label>
+                            </li>
+                            <li>
+                                <label for="slide-3" class="one-slide__switcher-button"><img src="icons/slider-button-empty.svg" role="presentation" alt="Empty slider button"></label>
+                            </li>
+                        </ul>
                     </div>
-                    <div>
-                        <span>50 м</span>
-                        <p>Радиус поражения</p>
+                    <div class="one-slide__specifications-list">
+                        <div class="one-slide__specification">
+                            <span class="one-slide__value">48 часов</span>
+                            <p class="one-slide__description">Без подзарядки</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </li>
+            <li class="slider__one-slide relative one-slide" data-slide="3">
+                <span class="one-slide__number">03</span>
+                <div class="one-slide__image-wrapper">
+                    <img class="one-slide__image width-100" src="images/slider-3.png" alt="Супер модный аппарат если делать конкретно нехуй">
+                </div>
+                <div class="one-slide__information">
+                    <h3 class="one-slide__name relative">Порхает как бабочка , жалит как пчела!</h3>
+                    <p class="one-slide__add">Этот обычный , на первый взгляд , квадрокоптер оснащен мощным лазером, замаскированым под стандартную камеру.</p>
+                    <div class="one-slide__about-switcher">
+                        <a class="one-slider__about button" href="#"><span class="button__text">Подробнее</span></a>
+                        <ul class="one-slide__switcher">
+                            <li>
+                                <label for="slide-1" class="one-slide__switcher-button"><img src="icons/slider-button-emty.svg" role="presentation" alt="Empty slider button"></label>
+                            </li>
+                            <li>
+                                <label for="slide-2" class="one-slide__switcher-button"><img src="icons/slider-button-empty.svg" role="presentation" alt="Empty slider button"></label>
+                            </li>
+                            <li>
+                                <label for="slide-3" class="one-slide__switcher-button"><img src="icons/slider-button.svg" role="presentation" alt="Slider button"></label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="one-slide__specifications-list">
+                        <div class="one-slide__specification">
+                            <span class="one-slide__value">800 м</span>
+                            <p class="one-slide__description">Дальность полёта</p>
+                        </div>
+                        <div class="one-slide__specification">
+                            <span class="one-slide__value">50 м</span>
+                            <p class="one-slide__description">Радиус поражения</p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
     </section>
     <section>
         <h2>Категории товаров</h2>

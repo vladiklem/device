@@ -1,0 +1,25 @@
+.button{
+  font-size: $typography-text-large;
+  font-family: "Gilroy" , sans-serif;
+  font-weight: bold;
+  color: black;
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.button::after{
+  content: " ";
+  position: absolute;
+  left:0;
+  right: 0;
+  top: 30%;
+  height: 20%;
+  background-color: $color-button-background;
+  z-index: 1;
+}
+
+.button__text{
+  position: relative;
+  z-index: 2;
+}

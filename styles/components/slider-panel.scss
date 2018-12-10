@@ -1,0 +1,18 @@
+#slide-1:checked ~ .slider [for="slide-1"] {
+  display: flex
+}
+
+#slide-2:checked ~ .slider [for="slide-2"] {
+  display: flex
+}
+
+#slide-3:checked ~ .slider [for="slide-3"] {
+  display: flex
+}
+
+#slide-1:checked ~ .slider [data-slide="1"],
+#slide-2:checked ~ .slider [data-slide="2"],
+#slide-3:checked ~ .slider [data-slide="3"] {
+  display: flex;
+}
+
