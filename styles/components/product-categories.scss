@@ -6,31 +6,29 @@
 .categories-list{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
 
   @include mobile{
-    flex-direction: column;
+    flex-wrap: nowrap;
+    overflow: auto;
+  }
+
+  @include tablet{
+    flex-wrap: nowrap;
+    overflow: auto;
   }
 
   @include desktop{
     flex-wrap: nowrap;
+    justify-content: space-between;
   }
 }
 
 .categories-list__item{
-  flex-basis: 100%;
-
-  @include mobile{
-    margin-bottom: 30px;
-  }
-
-  @include tablet{
-    flex-basis: 320px;
-    margin-bottom: 30px;
-  }
+  flex-basis: 160px;
+  margin-right: 40px;
 
   @include desktop{
-    flex-basis: 160px;
+    margin-right: 0;
   }
 }
 
@@ -66,19 +64,11 @@
   color: black;
   margin-top: 10px;
 
-  @include mobile{
-    text-align: center;
-  }
-
   @include tablet{
-    font-size: $typography-text-large - 0.165rem;
     margin-top: 20px;
-    text-align: center;
   }
 
   @include desktop{
-    font-size: $typography-text-large;
     margin-top: 38px;
-    text-align: left;
   }
 }
