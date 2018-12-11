@@ -1,14 +1,31 @@
 .one-service{
-  display: flex;
+  display: none;
 
   @include mobile{
     flex-direction: column;
     padding: 15px;
   }
+
+  @include tablet{
+    padding: 0 15px;
+  }
+
+  @include desktop{
+    padding: 0;
+  }
 }
 
 .one-service__switch-buttons{
   margin-bottom:30px;
+
+  @include tablet{
+    flex-basis: 24.6%;
+    margin-top: -1rem;
+  }
+
+  @include desktop{
+    margin-left: 15px;
+  }
 }
 
 .one-service__switch-buttons::after{
@@ -17,24 +34,61 @@
   width: 7px;
   height: 200px;
   background-color: black;
-  top: -3rem;
+  top: -48px;
   right: 0;
+
+  @include tablet{
+    height: 260px;
+    top: -55px;
+  }
+
+  @include desktop{
+    height: 319px;
+    top: -101px;
+  }
 }
 
 .one-service__button{
   width: 160px;
 }
 
+.one-service__theme{
+  @include tablet{
+    flex-basis: 55.9%;
+    margin-top: -1.6rem;
+    padding: 0 50px;
+  }
+
+  @include desktop{
+    padding: 0 117px;
+  }
+}
+
 .one-service__name{
   font-family: "Gilroy", sans-serif;
   font-weight: bold;
   font-size: $typography-text-extra-large;
+  line-height: $typography-text-extra-large;
   color: $color-text;
 }
 
 .one-service__description{
   font-family: "Open Sans", sans-serif;
   font-size: $typography-text-small;
+  line-height: 30px;
   color: $color-text-secondary;
   margin-bottom: 15px;
+}
+
+.one-service__img-wrapeer{
+  @include mobile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include tablet{
+    flex-basis: 19.5%;
+    margin-top: -1rem;
+  }
 }

@@ -1,23 +1,24 @@
 .services-panel{
   background-color: $color-secondary;
+  min-height: 288px;
   margin-top: 40px;
 }
 
-#service-1:checked ~ .services-panel__list [for="slide-1"] {
+#service-1:checked ~ .services-panel__list [for="service-1"] {
+  display: flex;
+}
+
+#service-2:checked ~ .services-panel__list [for="service-2"] {
   display: flex
 }
 
-#service-2:checked ~ .services-panel__list [for="slide-2"] {
+#service-3:checked ~ .services-panel__list [for="service-3"] {
   display: flex
 }
 
-#service-3:checked ~ .services-panel__list [for="slide-3"] {
-  display: flex
-}
-
-#service-1:checked ~ .services-panel__list [data-slide="1"],
-#service-2:checked ~ .services-panel__list [data-slide="2"],
-#service-3:checked ~ .services-panel__list [data-slide="3"] {
+#service-1:checked ~ .services-panel__list [data-service="1"],
+#service-2:checked ~ .services-panel__list [data-service="2"],
+#service-3:checked ~ .services-panel__list [data-service="3"] {
   display: flex;
 }
 
