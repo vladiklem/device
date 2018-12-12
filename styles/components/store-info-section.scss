@@ -3,6 +3,11 @@
   font-size: $typography-text-extra-large;
   font-weight: bold;
   color: $color-text;
+  margin-bottom: 30px;
+
+  @include tablet{
+    margin-bottom: 60px;
+  }
 }
 
 .store-info-section__name::before{
@@ -10,7 +15,11 @@
   width: 80px;
   height: 7px;
   position: absolute;
-  top: -41px;
+  top: -21px;
   left: 0;
   background-color: $color-text;
+
+  @include tablet{
+    top: -41px;
+  }
 }

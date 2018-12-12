@@ -1,12 +1,24 @@
 .store-info{
   display: flex;
   margin-top: 107px;
+
+  @include mobile{
+    flex-wrap: wrap;
+  }
 }
 
 .store-info__about-us{
   flex-basis: 50%;
+
+  @include mobile{
+    flex-basis: 100%;
+  }
 }
 
 .store-info__contacts{
   flex-basis: 50%;
+
+  @include mobile{
+    flex-basis: 100%;
+  }
 }
