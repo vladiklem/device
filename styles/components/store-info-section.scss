@@ -1,0 +1,16 @@
+.store-info-section__name{
+  font-family: "Gilroy", sans-serif;
+  font-size: $typography-text-extra-large;
+  font-weight: bold;
+  color: $color-text;
+}
+
+.store-info-section__name::before{
+  content: " ";
+  width: 80px;
+  height: 7px;
+  position: absolute;
+  top: -41px;
+  left: 0;
+  background-color: $color-text;
+}
