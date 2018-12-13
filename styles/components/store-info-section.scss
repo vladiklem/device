@@ -1,3 +1,9 @@
+.store-info-section{
+  @include mobile{
+    padding: 15px;
+  }
+}
+
 .store-info-section__name{
   font-family: "Gilroy", sans-serif;
   font-size: $typography-text-extra-large;
@@ -22,4 +28,38 @@
   @include tablet{
     top: -41px;
   }
+}
+
+.store-info-section__description{
+  font-size: $typography-text-small;
+  line-height: $typography-text-small*2;
+  color: $color-text-secondary;
+  margin-bottom: 25px;
+}
+
+.store-info-section__list{
+  padding-top: 20px;
+}
+
+.store-info-section__item{
+  font-family: "Gilroy" , sans-serif;
+  font-weight: bold;
+  color: $color-text;
+  font-size: $typography-text-small;
+  padding-left: 36px;
+  position: relative;
+}
+
+.store-info-section__item::before{
+  content: " ";
+  position: absolute;
+  background-image: url("../icons/list-style-circle.svg");
+  height: 16px;
+  width: 16px;
+  top: 0;
+  left: 0;
+}
+
+.store-info-section__button{
+  width: 260px;
 }
