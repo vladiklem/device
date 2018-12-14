@@ -1,0 +1,53 @@
+.store-info{
+  display: flex;
+  margin-top: 107px;
+
+  @include mobile{
+    flex-wrap: wrap;
+  }
+}
+
+.store-info__about-us{
+  flex-basis: 50%;
+
+  @include mobile{
+    flex-basis: 100%;
+    padding: 15px;
+  }
+
+  @include tablet{
+    padding: 0 15px;
+  }
+
+  @include desktop{
+    padding-left: 15px;
+    padding-right: 68px;
+  }
+
+  @include widescreen{
+    padding-left: 0;
+  }
+}
+
+.store-info__contacts{
+  flex-basis: 50%;
+
+  @include mobile{
+    flex-basis: 100%;
+    margin-top: 50px;
+    padding: 15px;
+  }
+
+  @include tablet{
+    padding: 0 15px;
+  }
+
+  @include desktop{
+    padding-right: 15px;
+    padding-left: 68px;
+  }
+
+  @include widescreen{
+    padding-right: 0;
+  }
+}

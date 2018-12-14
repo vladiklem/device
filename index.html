@@ -305,42 +305,54 @@
         </ul>
     </section>
     <section>
-        <section>
-            <h3>О нас</h3>
-            <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-            <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-            <ul>
-                <li>Деловые линии</li>
-                <li>Авторейдинг</li>
-                <li>ЖелДорЭкспидиция</li>
+        <h2>Информация об магазине</h2>
+        <div>
+            <img src="images/logo-1.png" alt="DJI logo">
+            <img src="images/logo-2.png" alt="SPGadgets logo">
+            <img src="images/logo-3.png" alt="GoPro logo">
+            <img src="images/logo-4.png" alt="VIVE logo">
+        </div>
+    </section>
+    <section class="store-info section">
+        <h2 class="visually-hidden">Информация об магазине</h2>
+        <section class="store-info__about-us store-info-section">
+            <h3 class="store-info-section__name relative">О нас</h3>
+            <p class="store-info-section__description">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+            <p class="store-info-section__description">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+            <ul class="store-info-section__list">
+                <li class="store-info-section__item mb-25">Деловые линии</li>
+                <li class="store-info-section__item mb-25">Авторейдинг</li>
+                <li class="store-info-section__item">ЖелДорЭкспидиция</li>
             </ul>
-            <a href="#">Подробнее о нас</a>
+            <a class="store-info-section__button button" href="#"><span class="button__text">Подробнее о нас</span></a>
         </section>
-        <section>
-            <h3>Контакты</h3>
-            <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-            <button><img src="images/map.jpg" alt="Карта на которой изображено расположение магазина DEVICE"></button>
-            <div>
-                <button><img src="icons/modal-close.svg" alt="Close item"></button>
-                <img src="images/map.jpg" alt="Карта на которой изображено расположение магазина DEVICE">
+        <section class="store-info__contacts store-info-section">
+            <h3 class="store-info-section__name relative">Контакты</h3>
+            <p class="store-info-section__description">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+            <button class="store-info-section__popup-map-button"><img src="images/map.jpg" alt="Карта на которой изображено расположение магазина DEVICE"></button>
+            <div class="modal-window store-info-section__map-modal-window">
+                <button class="modal-window__close"><img src="icons/modal-close.svg" alt="Close item"></button>
+                <img class="modal-window__img-map" src="images/map-big.jpg" alt="Карта на которой изображено расположение магазина DEVICE">
             </div>
-            <button>Напишите нам</button>
-            <div>
-                <button><img src="icons/modal-close.svg" alt="Close item"></button>
+            <button class="store-info-section__popup-mail-button button"><span class="button__text">Напишите нам</span></button>
+            <div class="modal-window store-info-section__mail-modal-window">
+                <button class="modal-window__close"><img src="icons/modal-close.svg" alt="Close item"></button>
                 <form>
-                    <div>
-                        <p>
-                            <label for="user-name">Ваше имя:</label>
-                            <input id="user-name" type="text">
+                    <div class="modal-window__name-email">
+                        <p class="modal-window__field">
+                            <label class="modal-window__label" for="user-name">Ваше имя:</label>
+                            <input class="modal-window__input" id="user-name" type="text" placeholder="Имя Фамилия">
                         </p>
-                        <p>
-                            <label for="user-email">Ваш e-mail:</label>
-                            <input id="user-email" type="email">
+                        <p class="modal-window__field">
+                            <label class="modal-window__label" for="user-email">Ваш e-mail:</label>
+                            <input class="modal-window__input" id="user-email" type="email" placeholder="email@example.com">
                         </p>
                     </div>
-                    <label for="mail-body">Текст письма:</label>
-                    <textarea id="mail-body"></textarea>
-                    <button type="submit">Отправить</button>
+                    <p class="modal-window__field">
+                        <label class="modal-window__label" for="mail-body">Текст письма:</label>
+                        <textarea class="modal-window__input" id="mail-body" placeholder="В свободной форме"></textarea>
+                    </p>
+                    <button class="modal-window__submit-button button" type="submit"><span class="button__text">Отправить</span></button>
                 </form>
             </div>
         </section>

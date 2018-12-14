@@ -17,8 +17,11 @@ $tablet: 768px;
 @import "components/nav-list";
 @import "components/services-panel";
 @import "components/partners-panel";
+@import "components/store-info";
+@import "components/store-info-section";
 
-@import "elements/one-slide";
 @import "elements/button";
+@import "elements/one-slide";
 @import "elements/one-service";
+@import "elements/modal-window";
 

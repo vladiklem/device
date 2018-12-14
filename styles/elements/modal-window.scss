@@ -1,0 +1,108 @@
+.modal-window{
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  max-width: 960px;
+  width: 100%;
+  z-index: 5;
+
+  @include tablet{
+    left: 50%;
+    transform: translate(-50% , -50%);
+  }
+}
+
+.modal-window__close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  opacity: 0.5;
+
+  @include mobile{
+    height: 40px;
+    width: 40px;
+  }
+
+  @include desktop{
+    top: 15px;
+    right: 15px;
+  }
+}
+
+.modal-window__img-map{
+  box-shadow: 0 0 10px 0 rgba(122,122,122,1);
+
+  @include desktop{
+    box-shadow: 0 0 0 0;
+  }
+}
+
+.modal-window__name-email{
+  display: flex;
+  flex-direction: column;
+
+  @include tablet{
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  @include desktop{
+    margin-bottom: 40px;
+  }
+}
+
+.modal-window__field{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  @include tablet{
+    flex-basis: 47.8%;
+  }
+}
+
+.modal-window__label{
+  font-size: $typography-text-small;
+  font-family: "Gilroy", sans-serif;
+  font-weight: bold;
+  color: $color-text;
+  margin-bottom: 7px;
+
+  @include tablet{
+    font-size: $typography-text-large;
+    margin-bottom: 14px;
+  }
+}
+
+.modal-window__input{
+  padding: 10px;
+  background-color: $color-input-background;
+  font-size: $typography-text-small;
+  font-family: "Open Sans", sans-serif;
+  color: $color-text-secondary;
+  border: 0;
+
+  @include tablet{
+    flex-basis: 80%;
+    padding: 20px;
+  }
+}
+
+.modal-window__submit-button{
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: block;
+
+  @include tablet{
+    margin: 0;
+    margin-top: 50px;
+  }
+}

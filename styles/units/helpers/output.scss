@@ -58,6 +58,10 @@
   }
 }
 
+.tablet\:mt-55 {
+
+}
+
 .tab-mt-40{
   @include tablet{
     margin-top: 40px;
@@ -105,3 +109,4 @@
 .tab-mt-35{
   margin-top: 35px;
 }
+
