@@ -2,6 +2,14 @@
   background-color: $color-secondary;
   min-height: 288px;
   margin-top: 40px;
+
+  @include tablet{
+    margin-top: 120px;
+  }
+
+  @include desktop{
+    margin-top: 186px;
+  }
 }
 
 #service-1:checked ~ .services-panel__list [for="service-1"] {
