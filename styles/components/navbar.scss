@@ -10,6 +10,12 @@
   }
 }
 
+.navbar--catalog{
+  @include tablet{
+    padding: 27px 60px 55px 60px;
+  }
+}
+
 .navbar__logo{
   line-height: $typography-h1;
   transition: 0.3s;
