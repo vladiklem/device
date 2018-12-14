@@ -23,6 +23,7 @@
   outline: 0;
   background-color: transparent;
   opacity: 0.5;
+  transition: 0.3s;
 
   @include mobile{
     height: 40px;
@@ -34,6 +35,16 @@
     right: 15px;
   }
 }
+
+.modal-window__close:hover{
+  opacity: 1;
+}
+
+.modal-window__close:active{
+  opacity: 0.35;
+}
+
+.modal-window__close
 
 .modal-window__img-map{
   box-shadow: 0 0 10px 0 rgba(122,122,122,1);

@@ -21,11 +21,11 @@
 .nav-list__catalog:hover .nav-list__categories{
   @include desktop{
     display: flex;
+    transition: 0.3s;
   }
 }
 
 .nav-list__categories{
-  transition: 0.5s;
   min-height: 164px;
   background-color: $color-primary;
   z-index: 2;

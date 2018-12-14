@@ -1,9 +1,13 @@
 .store-info{
   display: flex;
-  margin-top: 107px;
 
   @include mobile{
     flex-wrap: wrap;
+    margin-top: 40px;
+  }
+
+  @include tablet{
+    margin-top: 135px;
   }
 }
 
@@ -40,6 +44,8 @@
 
   @include tablet{
     padding: 0 15px;
+    display: flex;
+    flex-direction: column;
   }
 
   @include desktop{
