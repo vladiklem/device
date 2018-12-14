@@ -1,0 +1,175 @@
+.bg-footer{
+  background-color: $color-footer-background;
+}
+
+.footer{
+  display: flex;
+  color: $color-text-footer;
+  padding: 15px;
+
+  @include mobile{
+    flex-direction: column;
+  }
+
+  @include tablet{
+    padding: 30px 20px;
+  }
+
+  @include desktop{
+    padding: 66px 0;
+  }
+}
+
+.footer__name-address{
+  display: flex;
+  flex-direction: column;
+
+  @include mobile{
+    align-items: center;
+  }
+}
+
+.footer__name{
+  font-size: $typography-h1;
+  line-height: $typography-h1;
+  font-family: "Gilroy", sans-serif;
+  font-weight: bold;
+  color: $color-footer-name;
+
+  @include mobile{
+    margin-bottom: 15px;
+  }
+
+  @include tablet{
+    margin-bottom: 40px;
+  }
+}
+
+.footer__name::before{
+  @include tablet{
+    content: " ";
+    position: absolute;
+    bottom: 45px;
+    left: 15px;
+    height: 7px;
+    width: 80px;
+    background-color: #ffc600;
+  }
+
+  @include desktop{
+    bottom: 80px;
+  }
+}
+
+.footer__address{
+  font-size: $typography-text-small;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+
+  @include tablet{
+    font-size: $typography-text-y-small;
+  }
+}
+
+.footer__nav-social{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mobile{
+    margin-top: 15px;
+  }
+
+  @include tablet{
+    flex-grow: 1;
+  }
+}
+
+.footer__nav-list{
+  display: flex;
+
+  @include tablet{
+    margin-top: 15px;
+  }
+
+  @include desktop{
+    margin-top: 95px;
+  }
+}
+
+.footer__nav-list-link{
+  font-size: $typography-text-small;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $color-text-footer;
+
+  @include tablet{
+    font-size: $typography-text-medium;
+  }
+}
+
+.footer__social-list{
+  display: flex;
+
+  @include mobile{
+    margin-top: 15px;
+  }
+
+  @include tablet{
+    margin-top: auto;
+  }
+
+  @include desktop{
+    margin-top: 67px;
+  }
+}
+
+.footer__actions-number{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: $typography-text-small;
+}
+
+.footer__actions-list{
+  display: flex;
+  justify-content: center;
+  @include mobile{
+    margin-top: 10px;
+  }
+
+  @include tablet{
+    flex-direction: column;
+  }
+
+  @include desktop{
+    flex-direction: row;
+  }
+}
+
+.footer__actions-list-link{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: $color-text-footer;
+  font-size: $typography-text-small;
+}
+
+.footer__number{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+
+  @include mobile{
+    margin-top: 15px;
+  }
+
+  @include tablet{
+    margin-bottom: 10px;
+  }
+
+  @include desktop{
+    margin-top: 55px;
+    margin-bottom: 0;
+  }
+}
