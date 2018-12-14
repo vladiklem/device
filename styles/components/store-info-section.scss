@@ -1,7 +1,5 @@
 .store-info-section{
-  @include mobile{
-    padding: 15px;
-  }
+
 }
 
 .store-info-section__name{
@@ -12,7 +10,11 @@
   margin-bottom: 30px;
 
   @include tablet{
-    margin-bottom: 60px;
+    margin-bottom: 40px;
+  }
+
+  @include desktop{
+    margin-bottom: 65px;
   }
 }
 
@@ -35,10 +37,17 @@
   line-height: $typography-text-small*2;
   color: $color-text-secondary;
   margin-bottom: 25px;
+
+  @include tablet{
+    margin-bottom: 45px;
+  }
 }
 
 .store-info-section__list{
-  padding-top: 20px;
+
+  @include mobile{
+    padding-top: 20px;
+  }
 }
 
 .store-info-section__item{
@@ -62,4 +71,69 @@
 
 .store-info-section__button{
   width: 260px;
+  display: block;
+
+  @include mobile{
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  @include tablet{
+    margin-top: 80px;
+  }
+}
+
+.store-info-section__popup-map-button{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 0;
+}
+
+.store-info-section__popup-map-button:active ~ .store-info-section__map-modal-window{
+  display: block;
+}
+
+.store-info-section__map-modal-window{
+  display: none;
+}
+
+.store-info-section__popup-mail-button{
+  width: 260px;
+  display: block;
+
+  @include mobile{
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+
+  @include tablet{
+    margin-top: auto;
+  }
+}
+
+.store-info-section__popup-mail-button:active ~ .store-info-section__mail-modal-window{
+  display: block;
+}
+
+
+.store-info-section__mail-modal-window{
+  display: none;
+  padding: 0 15px;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  background-color: $color-text-footer;
+  box-shadow: 0 0 10px 0 rgba(122,122,122,1);
+
+  @include tablet{
+    padding: 0 15px;
+    padding-top: 75px;
+    padding-bottom: 30px;
+    box-shadow: 0px 7px 35px 0px rgba(122,122,122,1);
+  }
+
+  @include desktop{
+    padding: 99px;
+  }
 }
