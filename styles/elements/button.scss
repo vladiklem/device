@@ -1,11 +1,24 @@
 .button{
   font-size: $typography-text-large;
+  line-height: $typography-text-large;
   font-family: "Gilroy" , sans-serif;
   font-weight: bold;
   color: black;
   position: relative;
   text-transform: uppercase;
   text-align: center;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button:focus{
+  outline: 0;
+}
+
+.button:hover::after{
+  height: 100%;
+  padding: 18px 0;
 }
 
 .button::after{
@@ -13,13 +26,31 @@
   position: absolute;
   left:0;
   right: 0;
-  top: 30%;
-  height: 20%;
+  height: 50%;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: $color-button-background;
   z-index: 1;
+  transition: 0.3s;
 }
 
 .button__text{
   position: relative;
   z-index: 2;
 }
+
+.button--active{
+  width: 100%;
+  background-color: black;
+}
+
+.button--active .button{
+  color: $color-button-active-text;
+  padding: 12px 0;
+}
+
+.button--active .button::after{
+  content: " ";
+  background-color: black;
+}
+
