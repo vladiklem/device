@@ -87,10 +87,6 @@
   font-size: 0;
 }
 
-.store-info-section__popup-map-button:active ~ .store-info-section__map-modal-window{
-  display: block;
-}
-
 .store-info-section__map-modal-window{
   display: none;
 }
@@ -107,10 +103,6 @@
   @include tablet{
     margin-top: auto;
   }
-}
-
-.store-info-section__popup-mail-button:active ~ .store-info-section__mail-modal-window{
-  display: block;
 }
 
 
