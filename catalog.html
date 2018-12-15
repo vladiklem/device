@@ -56,87 +56,134 @@
             </ul>
         </nav>
     </section>
-    <aside class="filter-panel">
-        <h2 class="visually-hidden">Фильтры для товаров по цвету , стоимости и наличию bluetoth</h2>
-        <p>Фильтр:</p>
-        <form id="search-form" method="get">
-            <fieldset>
-                <h3>Стоимость</h3>
-                <input type="range" />
-                <div>
-                    <span>от 0</span>
-                    <span>до 5000</span>
-                </div>
+    <section class="relative">
+        <aside class="filter-panel relative">
+            <div class="filter-panel__wrapper">
+                <h2 class="visually-hidden">Фильтры для товаров по цвету , стоимости и наличию bluetoth</h2>
+                <p class="filter-panel__name">Фильтр:</p>
+                <form id="search-form" method="get">
+                    <fieldset class="filter-set">
+                        <h3 class="filter-set__name">Стоимость</h3>
+                        <input class="filter-set__range-line" type="range" />
+                        <div class="filter-set__borders-box">
+                            <span class="filter-set__range-border">от 0</span>
+                            <span class="filter-set__range-border">до 5000</span>
+                        </div>
+                    </fieldset>
+                    <fieldset class="filter-set">
+                        <h3 class="filter-set__name">Цвет</h3>
+                        <label class="checkbox-wrapper mb-17" for="color-black">
+                            Чёрный
+                            <input class="checkbox-wrapper__input" type="checkbox" id="color-black" name="color" value="black" checked/>
+                            <span class="checkbox-wrapper__checkmark"></span>
+                        </label>
+                        <label class="checkbox-wrapper mb-17" for="color-white">
+                            Белый
+                            <input class="checkbox-wrapper__input" type="checkbox" id="color-white" name="color" value="white" checked/>
+                            <span class="checkbox-wrapper__checkmark"></span>
+                        </label>
+                        <label class="checkbox-wrapper mb-17" for="color-blue">
+                            Синий
+                            <input class="checkbox-wrapper__input" type="checkbox" id="color-blue" name="color" value="blue"/>
+                            <span class="checkbox-wrapper__checkmark"></span>
+                        </label>
+                        <label class="checkbox-wrapper mb-17" for="color-red">
+                            Красный
+                            <input class="checkbox-wrapper__input" type="checkbox" id="color-red" name="color" value="red"/>
+                            <span class="checkbox-wrapper__checkmark"></span>
+                        </label>
+                        <label class="checkbox-wrapper" for="color-pink">
+                            Розовый
+                            <input class="checkbox-wrapper__input" type="checkbox" id="color-pink" name="color" value="pink"/>
+                            <span class="checkbox-wrapper__checkmark"></span>
+                        </label>
+                    </fieldset>
+                    <fieldset class="filter-set">
+                        <h3 class="filter-set__name">Bluetooth</h3>
+                        <label class="filter-set__radio-wrapper mb-17">
+                            <input class="filter-set__radio" type="radio" name="bluetooth" value="yes" checked/>
+                            <span class="filter-set__radiomark"></span>
+                            Есть
+                        </label>
+                        <label class="filter-set__radio-wrapper">
+                            <input class="filter-set__radio" type="radio" name="bluetooth" value="no"/>
+                            <span class="filter-set__radiomark"></span>
+                            Нет
+                        </label>
+                    </fieldset>
+                    <button class="button filter-set__show-button" type="submit"><span class="button__text">Показать</span></button>
+                </form>
+            </div>
+        </aside>
+        <aside class="sort-panel">
+            <p class="sort-panel__name">Сортировка:</p>
+            <fieldset class="sort-panel__set" form="search-form">
+                <label class="sort-panel__label">
+                    <input class="sort-panel__input" type="radio" name="sort" value="price" checked/>
+                    <span class="sort-panel__type">
+                        По цене
+                    </span>
+                </label>
+                <label class="sort-panel__label">
+                    <input class="sort-panel__input" type="radio" name="sort" value="type"/>
+                    <span class="sort-panel__type">
+                        По типу
+                    </span>
+                </label>
+                <label>
+                    <input class="sort-panel__input" type="radio" name="sort" value="popularity"/>
+                    <span class="sort-panel__type">
+                        По популярности
+                    </span>
+                </label>
             </fieldset>
-            <fieldset>
-                <h3>Цвет</h3>
-                <label for="color-black">Чёрный<input type="checkbox" id="color-black" name="color" value="black"/><span></span></label>
-                <label for="color-white">Белый<input type="checkbox" id="color-white" name="color" value="white"/><span></span></label>
-                <label for="color-blue">Синий<input type="checkbox" id="color-blue" name="color" value="blue"/><span></span></label>
-                <label for="color-red">Красный<input type="checkbox" id="color-red" name="color" value="red"/><span></span></label>
-                <label for="color-pink">Розовый<input type="checkbox" id="color-pink" name="color" value="pink"/><span></span></label>
+            <fieldset class="sort-panel__set ml-a" form="search-form">
+                <label>
+                    <input class="sort-panel__arrow-input" type="radio" name="sort-arrow" id="arrow-up" value="arrow-up" checked/>
+                    <svg width="11" height="10" viewBox="0 0 11 10"><path fill="#c3c2c2" d="M5.5 0L0 10h11z"/></svg>
+                </label>
+                <label for="arrow-down">
+                    <input class="sort-panel__arrow-input" type="radio" name="sort-arrow" id="arrow-down" value="arrow-down"/>
+                    <svg width="11" height="10" viewBox="0 0 11 10"><path fill="#c3c2c2" d="M5.5 10L0 0h11"/></svg>
+                </label>
             </fieldset>
-            <fieldset>
-                <h3>Bluetooth</h3>
-                <label><input type="radio" name="bluetooth" value="yes"/>Есть<span></span></label>
-                <label><input type="radio" name="bluetooth" value="no"/>Нет<span></span></label>
-            </fieldset>
-            <button type="submit">Показать</button>
-        </form>
-    </aside>
-    <aside>
-        <fieldset form="search-form">
-            <legend>Сортировка:</legend>
-            <label><input type="radio" name="sort" value="price"/>По цене<span></span></label>
-            <label><input type="radio" name="sort" value="type"/>По типу<span></span></label>
-            <label><input type="radio" name="sort" value="popularity"/>По популярности<span></span></label>
-        </fieldset>
-        <fieldset>
-            <label>
-                <input type="radio" name="sort-arrow" value="arrow-up"/>
-                <svg width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
-            </label>
-            <label>
-                <input type="radio" name="sort-arrow" value="arrow-down"/>
-                <svg width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
-            </label>
-        </fieldset>
-    </aside>
-    <section>
-        <ul>
-            <li>
-                <img src="images/item-1.jpg" alt="Изображение любительской селфи-палки которую используют любители селфи">
-                <h2>Любительская селфи-палка</h2>
-                <span>500 руб.</span>
-            </li>
-            <li>
-                <img src="images/item-2.jpg" alt="Изображение профессиональной селфи-палки которую используют профессионалы">
-                <h2>Профессиональной селфи-палка</h2>
-                <span>1 500 руб.</span>
-            </li>
-            <li>
-                <img src="images/item-3.jpg" alt="Изображение непотопляемой селфи-палки которую использует Военно-Морской Флот США что бы не утопиться">
-                <h2>Непотопляемая селфи-палка</h2>
-                <span>2 500 руб.</span>
-            </li>
-            <li>
-                <img src="images/item-1.jpg" alt="Изображение селфи-палки которую используют что бы следовать за мной">
-                <h2>Селфи-палка "Следуй за мной"</h2>
-                <span>4 900 руб.</span>
-            </li>
-        </ul>
-        <nav>
-            <span><a href="#">Назад</a></span>
+        </aside>
+        <section class="display-none">
             <ul>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
+                <li>
+                    <img src="images/item-1.jpg" alt="Изображение любительской селфи-палки которую используют любители селфи">
+                    <h2>Любительская селфи-палка</h2>
+                    <span>500 руб.</span>
+                </li>
+                <li>
+                    <img src="images/item-2.jpg" alt="Изображение профессиональной селфи-палки которую используют профессионалы">
+                    <h2>Профессиональной селфи-палка</h2>
+                    <span>1 500 руб.</span>
+                </li>
+                <li>
+                    <img src="images/item-3.jpg" alt="Изображение непотопляемой селфи-палки которую использует Военно-Морской Флот США что бы не утопиться">
+                    <h2>Непотопляемая селфи-палка</h2>
+                    <span>2 500 руб.</span>
+                </li>
+                <li>
+                    <img src="images/item-1.jpg" alt="Изображение селфи-палки которую используют что бы следовать за мной">
+                    <h2>Селфи-палка "Следуй за мной"</h2>
+                    <span>4 900 руб.</span>
+                </li>
             </ul>
-            <span><a href="#">Вперед</a></span>
-        </nav>
+            <nav>
+                <span><a href="#">Назад</a></span>
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                </ul>
+                <span><a href="#">Вперед</a></span>
+            </nav>
+        </section>
     </section>
 </main>
-<footer>
+<footer class="display-none">
     <div>
         <h2>Device</h2>
         <p>г. Москва, ул. Строителей, 15</p>

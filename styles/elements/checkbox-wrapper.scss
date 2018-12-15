@@ -1,0 +1,35 @@
+.checkbox-wrapper{
+  display: block;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+  padding-left: 41px;
+  height: 24px;
+  font-family: "Open Sans" , sans-serif;
+  color: $color-text;
+  font-size: $typography-text-small;
+}
+
+.checkbox-wrapper__input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox-wrapper__checkmark{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../icons/checkbox-off.svg");
+  height: 23px;
+  width: 23px;
+}
+
+
+
+.checkbox-wrapper .checkbox-wrapper__input:checked ~ .checkbox-wrapper__checkmark{
+  background-image: url("../icons/checkbox-on.svg");
+  width: 27px;
+}
