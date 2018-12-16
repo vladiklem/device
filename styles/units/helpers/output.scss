@@ -158,6 +158,18 @@
   margin-right: 18px;
 }
 
+.tablet\:mr-32{
+  @include tablet{
+    margin-right: 32px;
+  }
+}
+
+.mobile\:mr-10{
+  @include mobile{
+    margin-right: 10px;
+  }
+}
+
 .display-none{
   display: none;
 }
