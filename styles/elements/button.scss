@@ -20,9 +20,16 @@
   outline: 0;
 }
 
+.button:active::after{
+  background-color: $color-text;
+}
+
+.button:active{
+  color:$color-button-active-text;
+}
+
 .button:hover::after{
-  height: 100%;
-  padding: 18px 0;
+  height: 99.7%;
 }
 
 .button::after{

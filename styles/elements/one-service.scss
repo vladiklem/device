@@ -48,6 +48,10 @@
   }
 }
 
+.one-service__item:active{
+  background-color: black;
+}
+
 .one-service__button{
   width: 160px;
 }

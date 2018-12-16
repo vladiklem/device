@@ -234,19 +234,19 @@
     <section class="services-panel relative">
         <h2 class="visually-hidden">Информация для покупателей</h2>
         <input id="service-1" name="services-panel" class="visually-hidden" type="radio" checked/>
-        <input id="service-2" name="services-panel" class="visually-hidden" type="radio" />
-        <input id="service-3" name="services-panel" class="visually-hidden" type="radio" />
+        <input id="service-2" name="services-panel" class="visually-hidden" type="radio"/>
+        <input id="service-3" name="services-panel" class="visually-hidden" type="radio"/>
         <ul class="services-panel__list">
             <li class="container one-service" data-service="1">
                 <ul class="one-service__switch-buttons relative">
                     <li class="one-service__item button--active mb-25">
-                        <label for="service-1"><button class="one-service__button button"><span class="button__text">Доставка</span></button></label>
+                        <label for="service-1"><span class="one-service__button button"><span class="button__text">Доставка</span></span></label>
                     </li>
                     <li class="one-service__item mb-25">
-                        <label for="service-2"><button class="one-service__button button"><span class="button__text">Гарантия</span></button></label>
+                        <label for="service-2"><span class="one-service__button button"><span class="button__text">Гарантия</span></span></label>
                     </li>
                     <li class="one-service__item">
-                        <label for="service-3"><button class="one-service__button button"><span class="button__text">Кредит</span></button></label>
+                        <label for="service-3"><span class="one-service__button button"><span class="button__text">Кредит</span></span></label>
                     </li>
                 </ul>
                 <div class="one-service__theme">
@@ -260,38 +260,42 @@
             <li class="container one-service" data-service="2">
                 <ul class="one-service__switch-buttons relative">
                     <li class="one-service__item mb-25">
-                        <label for="service-1"><button class="one-service__button button"><span class="button__text">Доставка</span></button></label>
+                        <label for="service-1"><span class="one-service__button button"><span class="button__text">Доставка</span></span></label>
                     </li>
                     <li class="one-service__item button--active mb-25">
-                        <label for="service-2"><button class="one-service__button button"><span class="button__text">Гарантия</span></button></label>
+                        <label for="service-2"><span class="one-service__button button"><span class="button__text">Гарантия</span></span></label>
                     </li>
                     <li class="one-service__item">
-                        <label for="service-3"><button class="one-service__button button"><span class="button__text">Кредит</span></button></label>
+                        <label for="service-3"><span class="one-service__button button"><span class="button__text">Кредит</span></span></label>
                     </li>
                 </ul>
-                <div>
+                <div class="one-service__theme">
                     <h2 class="one-service__name">Гарантия</h2>
                     <p class="one-service__description">Если из-за возгорания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
                 </div>
-                <img src="icons/warranty.svg" alt="Picture which clearly show how this store cares about your house.">
+                <div class="one-service__img-wrapeer">
+                    <img src="icons/warranty.svg" alt="Picture which clearly show how this store cares about your house.">
+                </div>
             </li>
             <li class="container one-service" data-service="3">
                 <ul class="one-service__switch-buttons relative">
                     <li class="one-service__item mb-25">
-                        <label for="service-1"><button class="one-service__button button"><span class="button__text">Доставка</span></button></label>
+                        <label for="service-1"><span class="one-service__button button"><span class="button__text">Доставка</span></span></label>
                     </li>
                     <li class="one-service__item mb-25">
-                        <label for="service-2"><button class="one-service__button button"><span class="button__text">Гарантия</span></button></label>
+                        <label for="service-2"><span class="one-service__button button"><span class="button__text">Гарантия</span></span></label>
                     </li>
                     <li class="one-service__item button--active">
-                        <label for="service-3"><button class="one-service__button button"><span class="button__text">Кредит</span></button></label>
+                        <label for="service-3"><span class="one-service__button button"><span class="button__text">Кредит</span></span></label>
                     </li>
                 </ul>
-                <div>
+                <div class="one-service__theme">
                     <h2 class="one-service__name">Кредит</h2>
                     <p class="one-service__description">Залезть в долговую яму стало ещё проще! Кредитны консультанты подберут для вас натболее выгодные условия кредита. Выгодные для нашего банка, разумееться.</p>
                 </div>
-                <img src="icons/credit.svg" alt="Picture of typical credit slave of modernity.">
+                <div class="one-service__img-wrapeer">
+                    <img src="icons/credit.svg" alt="Picture of typical credit slave of modernity.">
+                </div>
             </li>
         </ul>
     </section>
