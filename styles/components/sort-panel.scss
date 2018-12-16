@@ -13,7 +13,7 @@
   }
 
   @include tablet{
-    width: 67.5%;
+    width: calc(50% + 251px);
     padding: 30px 30px;
   }
 
@@ -45,7 +45,10 @@
 }
 
 .sort-panel__set{
+  display: flex;
   border: 0;
+  line-height: 1;
+  font-size: $typography-text-small;
 
   @include mobile{
     margin: 0 auto;
@@ -75,8 +78,6 @@
 
 .sort-panel__type{
   font-family: "Open Sans" , sans-serif;
-  font-size: $typography-text-small;
-  line-height: $typography-text-small;
   color: $color-text-nav-submenu;
 }
 
