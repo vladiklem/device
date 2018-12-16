@@ -116,37 +116,39 @@
             </div>
         </aside>
         <aside class="sort-panel">
-            <p class="sort-panel__name">Сортировка:</p>
-            <div class="sort-panel__set">
-                <label class="sort-panel__label">
-                    <input class="sort-panel__input" type="radio" name="sort" value="price" checked/>
-                    <span class="sort-panel__type">
+            <div class="sort-panel__wrapper">
+                <p class="sort-panel__name">Сортировка:</p>
+                <div class="sort-panel__set">
+                    <label class="sort-panel__label">
+                        <input class="sort-panel__input" type="radio" name="sort" value="price" checked/>
+                        <span class="sort-panel__type">
                         По цене
                     </span>
-                </label>
-                <label class="sort-panel__label">
-                    <input class="sort-panel__input" type="radio" name="sort" value="type"/>
-                    <span class="sort-panel__type">
+                    </label>
+                    <label class="sort-panel__label">
+                        <input class="sort-panel__input" type="radio" name="sort" value="type"/>
+                        <span class="sort-panel__type">
                         По типу
                     </span>
-                </label>
-                <label>
-                    <input class="sort-panel__input" type="radio" name="sort" value="popularity"/>
-                    <span class="sort-panel__type">
+                    </label>
+                    <label>
+                        <input class="sort-panel__input" type="radio" name="sort" value="popularity"/>
+                        <span class="sort-panel__type">
                         По популярности
                     </span>
-                </label>
+                    </label>
+                </div>
+                <div class="sort-panel__set ml-a">
+                    <label class="mr-18" for="arrow-up">
+                        <input class="sort-panel__arrow-input" type="radio" name="sort-arrow" id="arrow-up" value="arrow-up" checked/>
+                        <svg width="11" height="10" viewBox="0 0 11 10"><path fill="#c3c2c2" d="M5.5 0L0 10h11z"/></svg>
+                    </label>
+                    <label for="arrow-down">
+                        <input class="sort-panel__arrow-input" type="radio" name="sort-arrow" id="arrow-down" value="arrow-down"/>
+                        <svg width="11" height="10" viewBox="0 0 11 10"><path fill="#c3c2c2" d="M5.5 10L0 0h11"/></svg>
+                    </label>
+                </div>
             </div>
-            <!--<fieldset class="sort-panel__set ml-a" form="search-form">-->
-                <!--<label>-->
-                    <!--<input class="sort-panel__arrow-input" type="radio" name="sort-arrow" id="arrow-up" value="arrow-up" checked/>-->
-                    <!--<svg width="11" height="10" viewBox="0 0 11 10"><path fill="#c3c2c2" d="M5.5 0L0 10h11z"/></svg>-->
-                <!--</label>-->
-                <!--<label for="arrow-down">-->
-                    <!--<input class="sort-panel__arrow-input" type="radio" name="sort-arrow" id="arrow-down" value="arrow-down"/>-->
-                    <!--<svg width="11" height="10" viewBox="0 0 11 10"><path fill="#c3c2c2" d="M5.5 10L0 0h11"/></svg>-->
-                <!--</label>-->
-            <!--</fieldset>-->
         </aside>
         <section class="display-none">
             <ul>
