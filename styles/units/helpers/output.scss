@@ -170,7 +170,23 @@
   }
 }
 
-.display-none{
-  display: none;
+.mobile\:mt-35{
+  @include mobile{
+    margin-top: 35px;
+  }
 }
+
+.tablet\:mt-65{
+  @include tablet{
+    margin-top: 65px;
+  }
+}
+
+.desktop\:mt-95{
+  @include tablet{
+    margin-top: 95px;
+  }
+}
+
+
 

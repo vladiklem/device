@@ -1,17 +1,5 @@
 .bg-footer{
   background-color: $color-footer-background;
-
-  @include mobile{
-    margin-top: 35px;
-  }
-
-  @include tablet{
-    margin-top: 65px;
-  }
-
-  @include desktop{
-    margin-top: 95px;
-  }
 }
 
 .footer{
