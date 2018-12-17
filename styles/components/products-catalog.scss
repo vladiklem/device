@@ -44,6 +44,60 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.products-catalog__image{
+  transition: 0.3s;
+}
+
+.products-catalog__item:hover .products-catalog__image{
+  opacity: 0.6;
+}
+
+.products-catalog__item:hover .products-catalog__add-cart-button{
+  display: flex;
+}
+
+.products-catalog__item:hover .products-catalog__add-compare-button{
+  display: block;
+}
+
+.products-catalog__add-cart-button{
+  display: none;
+  transition: 0.3s;
+  width: 220px;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.products-catalog__add-compare-button{
+  display: none;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 160px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  font-size: $typography-text-y-small;
+  opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer;
+  outline: 0;
+}
+
+.products-catalog__add-compare-button:hover{
+  opacity: 1;
+}
+
+.products-catalog__add-compare-button:active{
+  opacity: 0.4;
 }
 
 .products-catalog__name-price{

@@ -87,12 +87,19 @@
 }
 
 .sort-panel__input:checked + .sort-panel__type{
-  color: $color-text
+  opacity: 1;
 }
 
 .sort-panel__type{
   font-family: "Open Sans" , sans-serif;
-  color: $color-text-nav-submenu;
+  color: $color-text;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sort-panel__type:hover{
+  opacity: 0.6;
 }
 
 .sort-panel__arrow-input{
@@ -101,5 +108,11 @@
 
 .sort-panel__arrow-input:checked + svg path{
   fill: $color-text;
+}
+
+.sort-panel__arrow-input:hover + svg path{
+  transition: 0.3s;
+  fill: $color-arrow-hover;
+  cursor: pointer;
 }
 
