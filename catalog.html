@@ -78,110 +78,171 @@
             </ul>
         </nav>
     </section>
-    <aside>
-        <h2>Фильтры для товаров по цвету , стоимости и наличию bluetoth</h2>
-        <p>Фильтр:</p>
-        <form id="search-form" method="get">
-            <fieldset>
-                <h3>Стоимость</h3>
-                <input type="range" />
-                <div>
-                    <span>от 0</span>
-                    <span>до 5000</span>
+    <section class="relative">
+        <aside class="filter-panel relative">
+            <div class="filter-panel__wrapper">
+                <h2 class="visually-hidden">Фильтры для товаров по цвету , стоимости и наличию bluetoth</h2>
+                <p class="filter-panel__name">Фильтр:</p>
+                <form id="search-form" method="get">
+                    <fieldset class="filter-set">
+                        <h3 class="filter-set__name">Стоимость</h3>
+                        <input class="filter-set__range-line" type="range" />
+                        <div class="filter-set__borders-box">
+                            <span class="filter-set__range-border">от 0</span>
+                            <span class="filter-set__range-border">до 5000</span>
+                        </div>
+                    </fieldset>
+                    <fieldset class="filter-set">
+                        <h3 class="filter-set__name">Цвет</h3>
+                        <label class="checkbox-wrapper mb-17" for="color-black">
+                            Чёрный
+                            <input class="checkbox-wrapper__input" type="checkbox" id="color-black" name="color" value="black" checked/>
+                            <span class="checkbox-wrapper__checkmark"></span>
+                        </label>
+                        <label class="checkbox-wrapper mb-17" for="color-white">
+                            Белый
+                            <input class="checkbox-wrapper__input" type="checkbox" id="color-white" name="color" value="white" checked/>
+                            <span class="checkbox-wrapper__checkmark"></span>
+                        </label>
+                        <label class="checkbox-wrapper mb-17" for="color-blue">
+                            Синий
+                            <input class="checkbox-wrapper__input" type="checkbox" id="color-blue" name="color" value="blue"/>
+                            <span class="checkbox-wrapper__checkmark"></span>
+                        </label>
+                        <label class="checkbox-wrapper mb-17" for="color-red">
+                            Красный
+                            <input class="checkbox-wrapper__input" type="checkbox" id="color-red" name="color" value="red"/>
+                            <span class="checkbox-wrapper__checkmark"></span>
+                        </label>
+                        <label class="checkbox-wrapper" for="color-pink">
+                            Розовый
+                            <input class="checkbox-wrapper__input" type="checkbox" id="color-pink" name="color" value="pink"/>
+                            <span class="checkbox-wrapper__checkmark"></span>
+                        </label>
+                    </fieldset>
+                    <fieldset class="filter-set">
+                        <h3 class="filter-set__name">Bluetooth</h3>
+                        <label class="filter-set__radio-wrapper mb-17">
+                            <input class="filter-set__radio" type="radio" name="bluetooth" value="yes" checked/>
+                            <span class="filter-set__radiomark"></span>
+                            Есть
+                        </label>
+                        <label class="filter-set__radio-wrapper">
+                            <input class="filter-set__radio" type="radio" name="bluetooth" value="no"/>
+                            <span class="filter-set__radiomark"></span>
+                            Нет
+                        </label>
+                    </fieldset>
+                    <button class="button filter-set__show-button" type="submit"><span class="button__text">Показать</span></button>
+                </form>
+            </div>
+        </aside>
+        <aside class="sort-panel">
+            <div class="sort-panel__wrapper">
+                <p class="sort-panel__name">Сортировка:</p>
+                <div class="sort-panel__set">
+                    <label class="sort-panel__label">
+                        <input class="sort-panel__input" type="radio" name="sort" value="price" checked/>
+                        <span class="sort-panel__type">
+                        По цене
+                    </span>
+                    </label>
+                    <label class="sort-panel__label">
+                        <input class="sort-panel__input" type="radio" name="sort" value="type"/>
+                        <span class="sort-panel__type">
+                        По типу
+                    </span>
+                    </label>
+                    <label>
+                        <input class="sort-panel__input" type="radio" name="sort" value="popularity"/>
+                        <span class="sort-panel__type">
+                        По популярности
+                    </span>
+                    </label>
                 </div>
-            </fieldset>
-            <fieldset>
-                <h3>Цвет</h3>
-                <label for="color-black">Чёрный<input type="checkbox" id="color-black" name="color" value="black"/><span></span></label>
-                <label for="color-white">Белый<input type="checkbox" id="color-white" name="color" value="white"/><span></span></label>
-                <label for="color-blue">Синий<input type="checkbox" id="color-blue" name="color" value="blue"/><span></span></label>
-                <label for="color-red">Красный<input type="checkbox" id="color-red" name="color" value="red"/><span></span></label>
-                <label for="color-pink">Розовый<input type="checkbox" id="color-pink" name="color" value="pink"/><span></span></label>
-            </fieldset>
-            <fieldset>
-                <h3>Bluetooth</h3>
-                <label><input type="radio" name="bluetooth" value="yes"/>Есть<span></span></label>
-                <label><input type="radio" name="bluetooth" value="no"/>Нет<span></span></label>
-            </fieldset>
-            <button type="submit">Показать</button>
-        </form>
-    </aside>
-    <aside>
-        <fieldset form="search-form">
-            <legend>Сортировка:</legend>
-            <label><input type="radio" name="sort" value="price"/>По цене<span></span></label>
-            <label><input type="radio" name="sort" value="type"/>По типу<span></span></label>
-            <label><input type="radio" name="sort" value="popularity"/>По популярности<span></span></label>
-        </fieldset>
-        <fieldset>
-            <label>
-                <input type="radio" name="sort-arrow" value="arrow-up"/>
-                <svg width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 0L0 10h11z"/></svg>
-            </label>
-            <label>
-                <input type="radio" name="sort-arrow" value="arrow-down"/>
-                <svg width="11" height="10" viewBox="0 0 11 10"><path fill="#231F20" d="M5.5 10L0 0h11"/></svg>
-            </label>
-        </fieldset>
-    </aside>
-    <section>
-        <ul>
-            <li>
-                <img src="images/item-1.jpg" alt="Изображение любительской селфи-палки которую используют любители селфи">
-                <h2>Любительская селфи-палка</h2>
-                <span>500 руб.</span>
-            </li>
-            <li>
-                <img src="images/item-2.jpg" alt="Изображение профессиональной селфи-палки которую используют профессионалы">
-                <h2>Профессиональной селфи-палка</h2>
-                <span>1 500 руб.</span>
-            </li>
-            <li>
-                <img src="images/item-3.jpg" alt="Изображение непотопляемой селфи-палки которую использует Военно-Морской Флот США что бы не утопиться">
-                <h2>Непотопляемая селфи-палка</h2>
-                <span>2 500 руб.</span>
-            </li>
-            <li>
-                <img src="images/item-1.jpg" alt="Изображение селфи-палки которую используют что бы следовать за мной">
-                <h2>Селфи-палка "Следуй за мной"</h2>
-                <span>4 900 руб.</span>
-            </li>
-        </ul>
-        <nav>
-            <span><a href="#">Назад</a></span>
-            <ul>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-            </ul>
-            <span><a href="#">Вперед</a></span>
-        </nav>
+                <div class="sort-panel__set ml-a">
+                    <label class="mr-18" for="arrow-up">
+                        <input class="sort-panel__arrow-input" type="radio" name="sort-arrow" id="arrow-up" value="arrow-up" checked/>
+                        <svg width="11" height="10" viewBox="0 0 11 10"><path fill="#c3c2c2" d="M5.5 0L0 10h11z"/></svg>
+                    </label>
+                    <label for="arrow-down">
+                        <input class="sort-panel__arrow-input" type="radio" name="sort-arrow" id="arrow-down" value="arrow-down"/>
+                        <svg width="11" height="10" viewBox="0 0 11 10"><path fill="#c3c2c2" d="M5.5 10L0 0h11"/></svg>
+                    </label>
+                </div>
+            </div>
+        </aside>
+        <section class="products-catalog">
+            <div class="products-catalog__wrapper">
+                <ul class="products-catalog__list">
+                    <li class="products-catalog__item">
+                        <img src="images/item-1.jpg" alt="Изображение любительской селфи-палки которую используют любители селфи">
+                        <div class="products-catalog__name-price">
+                            <h2 class="products-catalog__name">Любительская селфи-палка</h2>
+                            <span class="products-catalog__price">500 руб.</span>
+                        </div>
+                    </li>
+                    <li class="products-catalog__item">
+                        <img src="images/item-2.jpg" alt="Изображение профессиональной селфи-палки которую используют профессионалы">
+                        <div class="products-catalog__name-price">
+                            <h2 class="products-catalog__name">Профессиональной селфи-палка</h2>
+                            <span class="products-catalog__price">1 500 руб.</span>
+                        </div>
+                    </li>
+                    <li class="products-catalog__item">
+                        <img src="images/item-3.jpg" alt="Изображение непотопляемой селфи-палки которую использует Военно-Морской Флот США что бы не утопиться">
+                        <div class="products-catalog__name-price">
+                            <h2 class="products-catalog__name">Непотопляемая селфи-палка</h2>
+                            <span class="products-catalog__price">2 500 руб.</span>
+                        </div>
+                    </li>
+                    <li class="products-catalog__item">
+                        <img src="images/item-1.jpg" alt="Изображение селфи-палки которую используют что бы следовать за мной">
+                        <div class="products-catalog__name-price">
+                            <h2 class="products-catalog__name">Селфи-палка "Следуй за мной"</h2>
+                            <span class="products-catalog__price">4 900 руб.</span>
+                        </div>
+                    </li>
+                </ul>
+                <nav class="products-catalog__nav">
+                    <span><a href="#" class="products-catalog__step">Назад</a></span>
+                    <ul class="products-catalog__num-list">
+                        <li class="tablet:mr-32 mobile:mr-10"><a href="#" class="products-catalog__link products-catalog__link--active">1</a></li>
+                        <li class="tablet:mr-32 mobile:mr-10"><a href="#" class="products-catalog__link">2</a></li>
+                        <li><a href="#" class="products-catalog__link">3</a></li>
+                    </ul>
+                    <span><a href="#" class="products-catalog__step">Вперёд</a></span>
+                </nav>
+            </div>
+        </section>
     </section>
 </main>
-<footer>
-    <div>
-        <h2>Device</h2>
-        <p>г. Москва, ул. Строителей, 15</p>
-    </div>
-    <div>
-        <ul>
-            <li><a href="#">Доставка</a></li>
-            <li><a href="#">Гарантия</a></li>
-            <li><a href="#">Контакты</a></li>
-        </ul>
-        <ul>
-            <li><a href="#"><svg width="32" height="32" viewBox="0 0 32 32"><path fill="#FFF" d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z"/></svg></a></li>
-            <li><a href="#"><svg width="32" height="32" viewBox="0 0 32 32"><path fill="#FFF" d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-3.643.311.317 1.164.518 1.46.457-.768-.233-2.149-3.244-.974-4.781 1.984 1.79 4.075 3.482 7.804 3.643.227-2.214 1.24-3.699 3.168-4.325 1.84-.479 3.255.26 3.901 1.138.737-.224 1.453-.466 2.193-.685-.004.833-.569 1.463-.935 1.709.747.165 1.423-.475 1.423-.475-.184.963-1.094 1.725-1.707 1.954z"/></svg></a></li>
-            <li><a href="#"><svg width="32" height="32" viewBox="0 0 32 32"><g fill="#FFF"><path d="M16.637 14.495c.402-.019.719-.082.951-.188.326-.145.54-.33.641-.559.101-.229.15-.496.15-.797 0-.232-.058-.465-.174-.697-.116-.232-.322-.405-.617-.517-.264-.1-.592-.155-.984-.165a76.242 76.242 0 0 0-1.652-.014h-.339v2.965h.565c.571 0 1.057-.009 1.459-.028zM18.118 17.084c-.282-.081-.672-.125-1.166-.132a127.97 127.97 0 0 0-1.55-.009h-.79v3.493h.264c1.014 0 1.74-.003 2.18-.009a3.2 3.2 0 0 0 1.212-.245c.377-.157.633-.364.774-.625s.214-.562.214-.9c0-.446-.088-.788-.261-1.03-.17-.241-.464-.423-.877-.543z"/><path d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm6.602 20.531a3.73 3.73 0 0 1-1.124 1.327c-.552.415-1.161.71-1.823.886s-1.501.264-2.519.264h-6.121V8.987h5.443c1.13 0 1.957.038 2.48.113a5.126 5.126 0 0 1 1.561.5c.533.27.929.632 1.189 1.087.26.455.392.975.392 1.558 0 .678-.179 1.278-.536 1.795-.358.518-.863.92-1.517 1.208v.075c.917.182 1.642.559 2.179 1.13.537.571.807 1.325.807 2.261 0 .678-.138 1.283-.411 1.817z"/></g></svg></a></li>
-        </ul>
-    </div>
-    <div>
-        <ul>
-            <li><a href="#"><img src="icons/user.svg" alt="User's silhouette">Войти</a></li>
-            <li><a href="#"><img src="icons/compare.svg" alt="Compare icon">Сравнить</a></li>
-            <li><a href="#"><img src="icons/cart.svg" alt="Cart icon">Корзина</a></li>
-        </ul>
-        <p>Тел.: +7(495)495-95-95</p>
+<footer class="bg-footer">
+    <div class="footer container relative">
+        <div class="footer__name-address">
+            <h2 class="footer__name">Device</h2>
+            <p class="footer__address">г. Москва, ул. Строителей, 15</p>
+        </div>
+        <div class="footer__nav-social">
+            <ul class="footer__nav-list">
+                <li class="mobile:mr-20 tablet:mr-38"><a class="footer__nav-list-link" href="#">Доставка</a></li>
+                <li class="mobile:mr-20 tablet:mr-38"><a class="footer__nav-list-link" href="#">Гарантия</a></li>
+                <li><a class="footer__nav-list-link" href="#">Контакты</a></li>
+            </ul>
+            <ul class="footer__social-list">
+                <li class="mr-22"><a href="#"><img src="icons/fb.svg"></a></li>
+                <li class="mr-22"><a href="#"><img src="icons/vk.svg"></a></li>
+                <li><a href="#"><img src="icons/twitter.svg"></a></li>
+            </ul>
+        </div>
+        <div class="footer__actions-number">
+            <ul class="footer__actions-list">
+                <li class="mobile:mr-20 tablet:mb-15 desktop:mr-42"><a class="footer__actions-list-link" href="#"><svg class="mobile:mr-7 tablet:mr-14" width="13" height="12" viewBox="0 0 13 12"><path fill="#ffc600" d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>Войти</a></li>
+                <li class="mobile:mr-20 tablet:mb-15 desktop:mr-42"><a class="footer__actions-list-link" href="#"><svg class="mobile:mr-7 tablet:mr-14" width="10" height="10" viewBox="0 0 10 10"><path fill="#ffc600" d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>Сравнить</a></li>
+                <li class="tablet:mb-15"><a class="footer__actions-list-link" href="#"><svg  class="mobile:mr-7 tablet:mr-14" width="12" height="12" viewBox="0 0 12 12"><path fill="#ffc600" d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path fill="#ffc600" d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>Корзина</a></li>
+            </ul>
+            <p class="footer__number">Тел.: +7(495)495-95-95</p>
+        </div>
     </div>
 </footer>
 </body>

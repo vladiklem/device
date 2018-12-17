@@ -21,9 +21,14 @@ $tablet: 768px;
 @import "components/store-info-section";
 @import "components/footer";
 @import "components/sub-nav";
+@import "components/filter-panel";
+@import "components/sort-panel";
+@import "components/products-catalog";
 
 @import "elements/button";
 @import "elements/one-slide";
 @import "elements/one-service";
 @import "elements/modal-window";
+@import "elements/filter-set";
+@import "elements/checkbox-wrapper";
 

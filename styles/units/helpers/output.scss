@@ -1,5 +1,5 @@
 .container{
-  max-width: 1162px;
+  max-width: 1160px;
   margin: 0 auto;
   width: 100%;
 }
@@ -149,4 +149,44 @@
     margin-right: 42px;
   }
 }
+
+.mb-17{
+  margin-bottom: 17px;
+}
+
+.mr-18{
+  margin-right: 18px;
+}
+
+.tablet\:mr-32{
+  @include tablet{
+    margin-right: 32px;
+  }
+}
+
+.mobile\:mr-10{
+  @include mobile{
+    margin-right: 10px;
+  }
+}
+
+.mobile\:mt-35{
+  @include mobile{
+    margin-top: 35px;
+  }
+}
+
+.tablet\:mt-65{
+  @include tablet{
+    margin-top: 65px;
+  }
+}
+
+.desktop\:mt-95{
+  @include tablet{
+    margin-top: 95px;
+  }
+}
+
+
 

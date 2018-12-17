@@ -1,0 +1,52 @@
+.filter-panel{
+  width: 50%;
+  padding-top: 70px;
+  background-color: $color-filter-background;
+  position: absolute;
+  left: -50%;
+  top: 0;
+
+  @include tablet{
+    width: 28.2%;
+    height: 100%;
+    left: 0;
+  }
+
+  @include desktop{
+    width: calc(50% - 253px);
+  }
+}
+
+.filter-panel__wrapper{
+  @include tablet{
+    padding: 35px 34px 30px 30px;
+    max-width: 328px;
+    margin-left: auto;
+  }
+
+  @include desktop{
+    padding: 69px 68px 60px 60px;
+  }
+}
+
+.filter-panel__name{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background-color: $color-form-heading-background;
+  font-family: "Gilroy" , sans-serif;
+  font-size: $typography-text-medium;
+  line-height: $typography-text-medium;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $color-text;
+  font-weight: bold;
+
+  @include tablet{
+    padding: 27px 0;
+  }
+}
+

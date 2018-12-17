@@ -1,0 +1,105 @@
+.sort-panel{
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: $color-filter-background;
+
+  @include mobile{
+    width: 100%;
+  }
+
+  @include tablet{
+    width: 71.8%;
+  }
+
+  @include desktop{
+    width: calc(50% + 253px);
+  }
+}
+
+.sort-panel__wrapper{
+  display: flex;
+  align-items : baseline;
+
+  @include mobile{
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  @include tablet{
+    padding: 27px 15px 27px 36px;
+    max-width: 832px;
+  }
+
+  @include desktop{
+    padding: 27px 0 27px 72px;
+  }
+}
+
+.sort-panel__name{
+  font-family: "Gilroy" , sans-serif;
+  font-size: $typography-text-small;
+  line-height: $typography-text-small;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $color-text;
+  font-weight: bold;
+  margin: 0 auto;
+
+  @include tablet{
+    margin: 0;
+    margin-right: 25px;
+    font-size: $typography-text-medium;
+    line-height: $typography-text-medium;
+  }
+
+  @include desktop{
+    margin-right: 55px;
+  }
+}
+
+.sort-panel__set{
+  display: flex;
+  border: 0;
+  line-height: 1;
+  font-size: $typography-text-small;
+
+  @include mobile{
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+}
+
+.sort-panel__label{
+  margin-right: 15px;
+
+  @include tablet{
+    margin-right: 13.6px
+  }
+
+  @include desktop{
+    margin-right: 30px;
+  }
+}
+
+.sort-panel__input{
+  display: none;
+}
+
+.sort-panel__input:checked + .sort-panel__type{
+  color: $color-text
+}
+
+.sort-panel__type{
+  font-family: "Open Sans" , sans-serif;
+  color: $color-text-nav-submenu;
+}
+
+.sort-panel__arrow-input{
+  display: none;
+}
+
+.sort-panel__arrow-input:checked + svg path{
+  fill: $color-text;
+}
+
