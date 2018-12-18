@@ -27,6 +27,10 @@
   @include mobile{
     align-items: center;
   }
+
+  @include tablet{
+    flex-basis: 25%;
+  }
 }
 
 .footer__name{
@@ -35,6 +39,8 @@
   font-family: "Gilroy", sans-serif;
   font-weight: bold;
   color: $color-footer-name;
+  transition: 0.3s;
+  cursor: pointer;
 
   @include mobile{
     margin-bottom: 15px;
@@ -44,6 +50,15 @@
     margin-bottom: 40px;
   }
 }
+
+.footer__name:hover{
+  opacity: 0.7;
+}
+
+.footer__name:active{
+  opacity: 0.4;
+}
+
 
 .footer__name::before{
   @include tablet{
@@ -102,10 +117,21 @@
   text-transform: uppercase;
   font-weight: bold;
   color: $color-text-footer;
+  transition: 0.3s;
 
   @include tablet{
     font-size: $typography-text-medium;
   }
+}
+
+.footer__nav-list-link:hover{
+  opacity: 0.7;
+  color: $color-text-footer;
+}
+
+.footer__nav-list-link:active{
+  opacity: 0.4;
+  color: $color-text-footer;
 }
 
 .footer__social-list{
@@ -154,6 +180,18 @@
   font-weight: 300;
   color: $color-text-footer;
   font-size: $typography-text-small;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.footer__actions-list-link:hover{
+  color: $color-text-footer;
+  opacity: 1;
+}
+
+.footer__actions-list-link:active{
+  color: $color-text-footer;
+  opacity: 0.4;
 }
 
 .footer__number{

@@ -20,13 +20,18 @@
   outline: 0;
 }
 
-.button:active::after{
+.button:active{
+  color:$color-button-active;
+}
+
+.button--service:active::after{
   background-color: $color-text;
 }
 
-.button:active{
+.button--service:active{
   color:$color-button-active-text;
 }
+
 
 .button:hover::after{
   height: 99.7%;
@@ -57,7 +62,7 @@
 
 .button--active{
   width: 100%;
-  background-color: black;
+  background-color: $color-text;
 }
 
 .button--active .button{
@@ -66,5 +71,5 @@
 
 .button--active .button::after{
   content: " ";
-  background-color: black;
+  background-color: $color-text;
 }
